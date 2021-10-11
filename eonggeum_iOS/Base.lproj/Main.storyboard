@@ -228,7 +228,7 @@
         <!--Info-->
         <scene sceneID="71b-up-fwg">
             <objects>
-                <viewController id="8rB-pf-9bG" customClass="MainViewController" customModule="eonggeum_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" id="8rB-pf-9bG" customClass="MainViewController" customModule="eonggeum_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xhX-5P-XtF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

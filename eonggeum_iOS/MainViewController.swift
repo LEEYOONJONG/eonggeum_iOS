@@ -1,12 +1,5 @@
-//
-//  MainViewController.swift
-//  eonggeum_iOS
-//
-//  Created by YOONJONG on 2021/10/09.
-//
-
 import UIKit
-
+import FirebaseAuth
 class MainViewController: UIViewController {
 
     @IBOutlet weak var welcomeLabel: UILabel!
@@ -22,11 +15,22 @@ class MainViewController: UIViewController {
         
         // navi bar 숨기기
         navigationController?.navigationBar.isHidden = true
+        
+        let email = Auth.auth().currentUser?.email ?? "someone"
+        welcomeLabel.text = """
+    \(email) 진입
+"""
     }
 
 
     @IBAction func logoutButtonTapped(_ sender: Any) {
-        self.navigationController?.popToRootViewController(animated: true)
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+            self.navigationController?.popToRootViewController(animated: true)
+        } catch let signOutError as NSError {
+            print("ERROR : signout \(signOutError.localizedDescription)")
+        }
     }
     
 }

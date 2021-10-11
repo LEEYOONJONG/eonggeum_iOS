@@ -6,11 +6,13 @@
 //
 
 import UIKit
+import GoogleSignIn
 
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var emailLoginButton: UIButton!
-    @IBOutlet weak var googleLoginButton: UIButton!
+    // gidsigninbutton 은 uibutton 역시 상속함
+    @IBOutlet weak var googleLoginButton: GIDSignInButton!
     @IBOutlet weak var appleLoginButton: UIButton!
     
     override func viewDidLoad() {
@@ -26,10 +28,13 @@ class LoginViewController: UIViewController {
         super.viewWillAppear(animated)
         // Navigation bar 숨기기
         navigationController?.navigationBar.isHidden = true
+        // Google SignIn에서 웹뷰를 띄울 컨트롤러는 이 로그인뷰컨트롤러다.는 것을 선언
+        GIDSignIn.sharedInstance().presentingViewController = self
     }
 
     @IBAction func googleLoginButtoonTapped(_ sender: Any) {
         // firebase 인증 코드
+        GIDSignIn.sharedInstance().signIn()
     }
     @IBAction func appleLoginButtonTapped(_ sender: Any) {
         // firebase 인증 코드
