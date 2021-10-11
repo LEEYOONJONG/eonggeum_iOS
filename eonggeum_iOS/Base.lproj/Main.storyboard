@@ -249,18 +249,31 @@
                                     <action selector="logoutButtonTapped:" destination="8rB-pf-9bG" eventType="touchUpInside" id="AHz-IB-o1V"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G6v-JM-4dY">
+                                <rect key="frame" x="151.5" y="672" width="111.5" height="33.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="비밀번호 변경">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="resetPasswordButtonTapped:" destination="8rB-pf-9bG" eventType="touchUpInside" id="OgL-S5-GjK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bbB-1g-p00"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="G6v-JM-4dY" firstAttribute="centerX" secondItem="bbB-1g-p00" secondAttribute="centerX" id="9e0-Hb-9ba"/>
                             <constraint firstItem="303-nj-39y" firstAttribute="centerY" secondItem="bbB-1g-p00" secondAttribute="centerY" id="MM0-Zn-L6a"/>
                             <constraint firstItem="UTl-dY-Tql" firstAttribute="centerX" secondItem="bbB-1g-p00" secondAttribute="centerX" id="V9Q-9D-nFh"/>
                             <constraint firstItem="303-nj-39y" firstAttribute="centerX" secondItem="bbB-1g-p00" secondAttribute="centerX" id="Yad-Cx-aqM"/>
+                            <constraint firstItem="G6v-JM-4dY" firstAttribute="top" secondItem="UTl-dY-Tql" secondAttribute="bottom" constant="128" id="xDn-Y9-Wwd"/>
                             <constraint firstItem="UTl-dY-Tql" firstAttribute="top" secondItem="303-nj-39y" secondAttribute="bottom" constant="40" id="zxw-0y-O7s"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Info" image="person.circle" catalog="system" id="nKI-3o-Fmv"/>
                     <connections>
+                        <outlet property="resetPasswordButton" destination="G6v-JM-4dY" id="MJC-av-k3E"/>
                         <outlet property="welcomeLabel" destination="303-nj-39y" id="T8Y-4I-3vE"/>
                     </connections>
                 </viewController>
