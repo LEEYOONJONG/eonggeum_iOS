@@ -23,6 +23,7 @@
 		114A85C12A92C4DC3729A01A /* Pods_eonggeum_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eonggeum_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		981FBBB22710AFA5002A1FDF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		981FBBB627113B0D002A1FDF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		988097F5271472330063DCDF /* eonggeum_iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = eonggeum_iOS.entitlements; sourceTree = "<group>"; };
 		98AF0982271020C7005668F6 /* eonggeum_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eonggeum_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98AF0985271020C7005668F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98AF0987271020C7005668F6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +79,7 @@
 		98AF0984271020C7005668F6 /* eonggeum_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				988097F5271472330063DCDF /* eonggeum_iOS.entitlements */,
 				98AF0985271020C7005668F6 /* AppDelegate.swift */,
 				98AF0987271020C7005668F6 /* SceneDelegate.swift */,
 				98AF098B271020C7005668F6 /* Main.storyboard */,
@@ -386,6 +388,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = eonggeum_iOS/eonggeum_iOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PN5JFN8NYT;
@@ -416,6 +419,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = eonggeum_iOS/eonggeum_iOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PN5JFN8NYT;
